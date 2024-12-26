@@ -20,8 +20,15 @@
     <!-- Data e hora no canto superior direito -->
     <div class="date-time" id="dateTime"></div>
 
-    <h1>Relatórios Power BI</h1>
-    <p>Escolha um link para acessar:</p>
+    <!-- Centralização do título "Relatórios Power BI" -->
+    <div class="centered-text">
+        <h1>Relatórios Power BI</h1>
+    </div>
+
+    <!-- Centralização do texto "Escolha um link para acessar:" -->
+    <div class="centered-text">
+        <p>Escolha um link para acessar:</p>
+    </div>
 
     <!-- Botões de categorias -->
     <div class="container" id="mainMenu">
@@ -51,14 +58,16 @@
     </div>
 
     <!-- Informações de Contato -->
-	<div class="contact-info">
-		<p>Contato:</p>
-		<p>Email: <a href="mailto:bi@gruponefarma.com.br" style="color: white;">bi@gruponefarma.com.br</a> / <a href="mailto:alan.vieira@gruponefarma.com.br" style="color: white;">alan.vieira@gruponefarma.com.br</a></p>
-		<p>Telefone: <a href="tel:+5585992433322" style="color: white;">(85) 99243-3322 (Alan Vieira)</a></p>
-	</div>
+    <div class="contact-info">
+        <p>Contato:</p>
+        <p>Email: <a href="mailto:bi@gruponefarma.com.br" style="color: white;">bi@gruponefarma.com.br</a> / <a href="mailto:alan.vieira@gruponefarma.com.br" style="color: white;">alan.vieira@gruponefarma.com.br</a></p>
+        <p>Telefone: <a href="tel:+5585992433322" style="color: white;">(85) 99243-3322 (Alan Vieira)</a></p>
+    </div>
 
     <!-- Frase na parte inferior -->
-     <div class="footer-text">Juntos somos melhores!</div>
+    <div class="centered-text">
+        <div class="footer-text">Juntos somos melhores!</div>
+    </div>
 
     <script>
         // Função para alternar a visibilidade das categorias de botões
@@ -101,11 +110,11 @@
                 second: '2-digit' 
             };
             const date = new Date().toLocaleString('pt-BR', options);
-			
-			// Altera a primeira letra do dia para maiúscula
-			const formattedDate = date.replace(/^\w/, (c) => c.toUpperCase());
             
-			document.getElementById('dateTime').textContent = formattedDate;
+            // Altera a primeira letra do dia para maiúscula
+            const formattedDate = date.replace(/^\w/, (c) => c.toUpperCase());
+            
+            document.getElementById('dateTime').textContent = formattedDate;
         }
 
         // Atualiza a data e hora a cada segundo
