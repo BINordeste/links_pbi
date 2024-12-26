@@ -15,26 +15,29 @@ body {
     position: relative; /* Necessário para posicionar a logo com position: absolute */
     padding: 0 10px; /* Garante que o conteúdo não fique colado nas bordas em telas pequenas */
     box-sizing: border-box; /* Para incluir o padding nas dimensões totais */
+    overflow: hidden; /* Evita que o conteúdo ultrapasse a tela */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
     max-width: 120px; /* Ajuste o tamanho da logo conforme necessário */
     width: 100%; /* Faz com que a logo se ajuste ao tamanho máximo */
     height: auto; /* Mantém a proporção da logo */
-    z-index: 10; /* Garante que a logo não se sobreponha ao conteúdo */
 }
 
 .date-time {
-    position: absolute;
-    top: 30px;
-    right: 20px;
     font-size: 16px;
     font-weight: bold;
     color: white;
-    z-index: 10; /* Garante que a data/hora não se sobreponha ao conteúdo */
+    text-align: right;
 }
 
 .container {
@@ -42,7 +45,7 @@ body {
     justify-content: center;
     gap: 20px; /* Espaço entre os botões */
     flex-wrap: wrap; /* Adiciona flex-wrap para melhorar a responsividade */
-    margin-top: 120px; /* Aumentei o espaçamento superior para evitar sobreposição com a logo */
+    margin-top: 100px; /* Espaço superior para evitar sobreposição com a logo */
     width: 100%; /* Garante que a largura da container seja 100% */
     box-sizing: border-box;
 }
@@ -104,12 +107,19 @@ p {
         margin-top: 20px;
     }
 
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
     .logo {
         max-width: 100px; /* Ajusta o tamanho da logo em telas menores */
     }
 
     .date-time {
         font-size: 14px; /* Diminui o tamanho da data e hora */
+        text-align: center; /* Alinha a data ao centro */
     }
 
     .container {
