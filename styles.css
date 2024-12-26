@@ -1,21 +1,20 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin: 0; /* Remove o margin padrão para evitar problemas de espaçamento */
+    margin: 0;
     background-color: #007090; /* Cor de fundo */
     color: white; /* Fonte branca */
     background-position: center center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
     background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
-    height: 100vh; /* A altura ocupa 100% da tela */
+    min-height: 100vh; /* Garante que a tela tenha pelo menos a altura completa */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Alinha ao topo */
     flex-direction: column;
-    position: relative; /* Necessário para posicionar a logo com position: absolute */
-    padding: 0 10px; /* Garante que o conteúdo não fique colado nas bordas em telas pequenas */
-    box-sizing: border-box; /* Para incluir o padding nas dimensões totais */
-    overflow: hidden; /* Evita que o conteúdo ultrapasse a tela */
+    padding: 10px; /* Adiciona padding nas bordas para melhorar o layout */
+    box-sizing: border-box;
+    overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
 .header {
@@ -25,12 +24,13 @@ body {
     padding: 20px;
     box-sizing: border-box;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .logo {
-    max-width: 120px; /* Ajuste o tamanho da logo conforme necessário */
-    width: 100%; /* Faz com que a logo se ajuste ao tamanho máximo */
-    height: auto; /* Mantém a proporção da logo */
+    max-width: 120px;
+    width: 100%;
+    height: auto;
 }
 
 .date-time {
@@ -38,15 +38,16 @@ body {
     font-weight: bold;
     color: white;
     text-align: right;
+    flex: 1 0 100%; /* Garante que a data seja colocada abaixo da logo se necessário */
 }
 
 .container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaço entre os botões */
-    flex-wrap: wrap; /* Adiciona flex-wrap para melhorar a responsividade */
-    margin-top: 100px; /* Espaço superior para evitar sobreposição com a logo */
-    width: 100%; /* Garante que a largura da container seja 100% */
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -54,13 +55,13 @@ button {
     padding: 12px 20px;
     font-size: 16px;
     background-color: #0DA9D5;
-    color: white; /* Fonte branca nos botões */
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     width: 200px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin: 10px 0; /* Adiciona margem entre os botões */
+    margin: 10px 0;
 }
 
 button:hover {
@@ -79,32 +80,30 @@ img {
 }
 
 p {
-    margin-bottom: 50px; /* Adiciona espaço entre o parágrafo e os botões */
+    margin-bottom: 50px;
 }
 
 .footer-text {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 24px;
     font-weight: bold;
     color: white;
+    margin-top: 20px;
 }
 
 .contact-info {
-    margin-top: 100px;
     font-size: 18px;
     color: white;
     text-align: center;
 }
 
-.hidden { display: none; } /* Classe para esconder categorias de botões */
+.hidden { 
+    display: none; /* Classe para esconder categorias de botões */
+}
 
-/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
     body {
-        margin-top: 20px;
+        justify-content: flex-start;
+        padding: 0;
     }
 
     .header {
@@ -114,47 +113,48 @@ p {
     }
 
     .logo {
-        max-width: 100px; /* Ajusta o tamanho da logo em telas menores */
+        max-width: 100px;
+        width: auto;
     }
 
     .date-time {
-        font-size: 14px; /* Diminui o tamanho da data e hora */
-        text-align: center; /* Alinha a data ao centro */
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
     }
 
     .container {
         flex-direction: column;
         align-items: center;
-        gap: 20px; /* Aumenta o espaço entre os botões */
-        margin-top: 150px; /* Aumenta o espaço entre os botões e a logo */
+        gap: 20px;
+        margin-top: 50px;
     }
 
     button {
-        width: 90%; /* Ajusta o tamanho do botão para 90% da largura da tela */
-        max-width: 350px; /* Limita o tamanho máximo do botão */
+        width: 90%;
+        max-width: 350px;
     }
 
     .footer-text {
-        font-size: 18px; /* Diminui o tamanho do texto no rodapé */
+        font-size: 18px;
     }
 
     .contact-info {
-        font-size: 16px; /* Diminui o tamanho do texto de contato */
-        margin-top: 30px; /* Ajusta o espaço de contato em telas pequenas */
+        font-size: 16px;
     }
 }
 
 /* Responsividade para telas muito pequenas */
 @media (max-width: 480px) {
     .container {
-        gap: 8px; /* Reduz o espaço entre os botões em telas menores */
+        gap: 8px;
     }
 
     button {
-        padding: 10px 15px; /* Ajusta o padding dos botões em telas pequenas */
+        padding: 10px 15px;
     }
 
     .footer-text {
-        font-size: 16px; /* Ajusta o tamanho do texto no rodapé */
+        font-size: 16px;
     }
 }
