@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acesse os relatórios Power BI do Grupo Nordeste com facilidade.">
+    <title>Links Power BI</title>
+    
+    <!-- Favicon (ícone na aba do navegador) -->
+    <link rel="icon" href="https://github.com/BINordeste/linkspbi/blob/main/Microsoft-Power-BI-Logo.png?raw=true" sizes="96x96" type="image/png">
+    
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Logo no canto superior esquerdo -->
+    <img src="C:\Users\binef\OneDrive\Área de Trabalho\Demandas\Links BI\LOGO GRUPO NORDESTE BRANCO - NOVA.png" alt="Logo do Grupo Nordeste" class="logo">
+
+    <!-- Data e hora no canto superior direito -->
+    <div class="date-time" id="dateTime"></div>
+
+    <h1>Relatórios Power BI</h1>
+    <p>Escolha um link para acessar:</p>
+
+    <!-- Botões de categorias -->
+    <div class="container" id="mainMenu">
+        <button onclick="toggleCategory('jbps')" aria-label="Mostrar relatórios JBPs">JBPs</button>
+        <button onclick="toggleCategory('gerencial')" aria-label="Mostrar relatórios Gerenciais">Gerenciais</button>
+    </div>
+
+    <!-- Contêiner de links JBPs -->
+    <div class="container hidden" id="jbps">
+        <button onclick="window.open('https://app.powerbi.com/groups/061451e1-3ee2-477c-b97b-700696706d28/reports/d8ee3e6b-985a-4ece-bf5b-e3cd415cc4c2/71351139ba1891e80595?experience=power-bi', '_blank');" rel="noopener noreferrer">BIG NUMBERS</button>
+        <button onclick="window.open('https://app.powerbi.com/groups/061451e1-3ee2-477c-b97b-700696706d28/reports/c424aa4f-124c-4b84-8772-2e63023d3721/ReportSection1f20799423c3c6083495?experience=power-bi', '_blank');" rel="noopener noreferrer">EMS</button>
+        <button onclick="window.open('https://app.powerbi.com/groups/061451e1-3ee2-477c-b97b-700696706d28/reports/68a8c2dc-3b05-4163-8878-1337adf85829/ReportSection1f20799423c3c6083495?experience=power-bi', '_blank');" rel="noopener noreferrer">GEOLAB</button>
+        <button onclick="window.open('https://app.powerbi.com/groups/061451e1-3ee2-477c-b97b-700696706d28/reports/073c88e9-2d94-415f-894c-45d4992bbbf8/ReportSection1f20799423c3c6083495?experience=power-bi', '_blank');" rel="noopener noreferrer">LEGRAND FARMA</button>
+        <button onclick="window.open('https://app.powerbi.com/groups/061451e1-3ee2-477c-b97b-700696706d28/reports/c113ef6b-73ee-4854-8e2c-062f46fabc6b/ReportSection1f20799423c3c6083495?experience=power-bi', '_blank');" rel="noopener noreferrer">LEGRAND GEN.</button>
+        <button onclick="window.open('https://app.powerbi.com/groups/061451e1-3ee2-477c-b97b-700696706d28/reports/9276e8e7-34c1-45b0-8d3e-ecb998ec734e/ReportSectiond45390e9c13da87adaa7?experience=power-bi', '_blank');" rel="noopener noreferrer">MULTILAB</button>
+        <button onclick="window.open('https://app.powerbi.com/groups/061451e1-3ee2-477c-b97b-700696706d28/reports/aa0a3730-8dce-4363-af30-3c1ae6b7454a/c7901bb8a070be46282d?experience=power-bi', '_blank');" rel="noopener noreferrer">NOVA QUÍMICA</button>
+        <button onclick="window.open('https://app.powerbi.com/groups/061451e1-3ee2-477c-b97b-700696706d28/reports/de228cab-bc4e-4b7b-aff6-8887d755538c/ReportSectiond45390e9c13da87adaa7?experience=power-bi', '_blank');" rel="noopener noreferrer">PHARLAB</button>
+        <button onclick="goBackToMenu()">Voltar</button> <!-- Botão de voltar -->
+    </div>
+
+    <!-- Contêiner de links Gerenciais -->
+    <div class="container hidden" id="gerencial">
+        <button onclick="window.open('https://app.powerbi.com/groups/20500f0a-4dad-44fb-a68d-ababd393af4f/reports/4a819458-9334-4e9f-ac86-ef1b6f2f4eee/ReportSection5b896aa180cfecfc8c4f?experience=power-bi', '_blank');" rel="noopener noreferrer">SISTEMA DE ACOMP.</button>
+        <button onclick="window.open('https://app.powerbi.com/groups/fac739d4-605d-43ec-913b-aeac442636e2/reports/d9022073-72fa-4951-87c8-aa5a22c540d4/ReportSection4d76f075658e90c7c620?experience=power-bi', '_blank');" rel="noopener noreferrer">PEDIDOS</button>
+        <button onclick="window.open('https://app.powerbi.com/groups/fac739d4-605d-43ec-913b-aeac442636e2/reports/d4d18049-e91b-4799-b97a-841738869042/9945d258e17b0420b89f?experience=power-bi', '_blank');" rel="noopener noreferrer">CUSTO DE REP.</button>
+        <button onclick="goBackToMenu()">Voltar</button> <!-- Botão de voltar -->
+    </div>
+
+    <!-- Informações de Contato -->
+	<div class="contact-info">
+		<p>Contato:</p>
+		<p>Email: <a href="mailto:bi@gruponefarma.com.br" style="color: white;">bi@gruponefarma.com.br</a> / <a href="mailto:alan.vieira@gruponefarma.com.br" style="color: white;">alan.vieira@gruponefarma.com.br</a></p>
+		<p>Telefone: <a href="tel:+5585992433322" style="color: white;">(85) 99243-3322 (Alan Vieira)</a></p>
+	</div>
+
+    <!-- Frase na parte inferior -->
+     <div class="footer-text">Juntos somos melhores!</div>
+
+    <script>
+        // Função para alternar a visibilidade das categorias de botões
+        function toggleCategory(category) {
+            const categoryContainer = document.getElementById(category);
+            const allCategories = document.querySelectorAll('.container');
+            
+            // Esconde todas as categorias
+            allCategories.forEach(function(container) {
+                container.classList.add('hidden');
+            });
+
+            // Exibe a categoria clicada
+            categoryContainer.classList.remove('hidden');
+        }
+
+        // Função para voltar ao menu principal
+        function goBackToMenu() {
+            const allCategories = document.querySelectorAll('.container');
+            
+            // Esconde todas as categorias
+            allCategories.forEach(function(container) {
+                container.classList.add('hidden');
+            });
+
+            // Exibe o menu principal
+            document.getElementById('mainMenu').classList.remove('hidden');
+        }
+
+        // Função para mostrar a data e hora no formato de Brasília
+        function updateDateTime() {
+            const options = { 
+                timeZone: 'America/Sao_Paulo', 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit' 
+            };
+            const date = new Date().toLocaleString('pt-BR', options);
+			
+			// Altera a primeira letra do dia para maiúscula
+			const formattedDate = date.replace(/^\w/, (c) => c.toUpperCase());
+            
+			document.getElementById('dateTime').textContent = formattedDate;
+        }
+
+        // Atualiza a data e hora a cada segundo
+        setInterval(updateDateTime, 1000);
+        updateDateTime(); // Chama a função inicialmente para mostrar a hora imediatamente
+    </script>
+
+</body>
+</html>
