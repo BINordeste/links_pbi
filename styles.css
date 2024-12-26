@@ -4,7 +4,7 @@ body {
     margin-top: 50px;
     background-color: #007090; /* Cor de fundo */
     color: white; /* Fonte branca */
-    background-image: url('https://github.com/BINordeste/links_pbi/blob/main/LOGO%20GRUPO%20NORDESTE%20BRANCO%20-%20NOVA.png?raw=true'); /* Caminho relativo da imagem de fundo */
+    /* background-image: url('https://github.com/BINordeste/links_pbi/blob/main/LOGO%20GRUPO%20NORDESTE%20BRANCO%20-%20NOVA.png?raw=true'); Caminho relativo da imagem de fundo */
     background-position: center center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
     background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
