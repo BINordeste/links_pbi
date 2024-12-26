@@ -18,9 +18,10 @@ body {
 
 .logo {
     position: absolute;
-    top: 0px;
-    left: 20px;
+    top: 10px;
+    left: 10px;
     max-width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
 }
 
 .date-time {
