@@ -17,6 +17,7 @@ body {
     overflow-y: auto; /* Permite rolagem vertical */
 }
 
+/* Centralização de conteúdo */
 .header, .content, .footer {
     display: flex;
     justify-content: center;
@@ -102,7 +103,7 @@ p {
     display: none; /* Classe para esconder categorias de botões */
 }
 
-/* Centralização dos textos */
+/* Centralização de textos */
 .centered-text {
     display: flex;
     justify-content: center;
