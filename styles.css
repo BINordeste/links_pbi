@@ -33,9 +33,13 @@ body {
 
 .container {
     display: flex;
-    justify-content: center; /* Alinha os botões ao centro */
+    justify-content: space-around;
     gap: 20px; /* Espaço entre os botões */
     flex-wrap: wrap; /* Adiciona flex-wrap para melhorar a responsividade */
+}
+
+.item {
+    flex: 1 1 100px; /* Itens vão se ajustar de acordo com o espaço disponível */
 }
 
 button {
