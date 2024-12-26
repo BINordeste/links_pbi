@@ -1,10 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin-top: 50px;
+    margin: 0; /* Remove o margin padrão para evitar problemas de espaçamento */
     background-color: #007090; /* Cor de fundo */
     color: white; /* Fonte branca */
-    /* background-image: url('https://github.com/BINordeste/links_pbi/blob/main/LOGO%20GRUPO%20NORDESTE%20BRANCO%20-%20NOVA.png?raw=true'); Caminho relativo da imagem de fundo */
     background-position: center center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
     background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
@@ -25,6 +24,7 @@ body {
     max-width: 120px; /* Ajuste o tamanho da logo conforme necessário */
     width: 100%; /* Faz com que a logo se ajuste ao tamanho máximo */
     height: auto; /* Mantém a proporção da logo */
+    z-index: 10; /* Garante que a logo não se sobreponha ao conteúdo */
 }
 
 .date-time {
@@ -34,6 +34,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     color: white;
+    z-index: 10; /* Garante que a data/hora não se sobreponha ao conteúdo */
 }
 
 .container {
@@ -41,7 +42,9 @@ body {
     justify-content: center;
     gap: 20px; /* Espaço entre os botões */
     flex-wrap: wrap; /* Adiciona flex-wrap para melhorar a responsividade */
-    margin-top: 80px; /* Espaço superior para evitar sobreposição com a logo */
+    margin-top: 120px; /* Aumentei o espaçamento superior para evitar sobreposição com a logo */
+    width: 100%; /* Garante que a largura da container seja 100% */
+    box-sizing: border-box;
 }
 
 button {
@@ -112,12 +115,13 @@ p {
     .container {
         flex-direction: column;
         align-items: center;
-        gap: 10px; /* Menos espaço entre os botões */
+        gap: 20px; /* Aumenta o espaço entre os botões */
+        margin-top: 150px; /* Aumenta o espaço entre os botões e a logo */
     }
 
     button {
-        width: 100%;
-        max-width: 300px; /* Limita o tamanho máximo do botão */
+        width: 90%; /* Ajusta o tamanho do botão para 90% da largura da tela */
+        max-width: 350px; /* Limita o tamanho máximo do botão */
     }
 
     .footer-text {
