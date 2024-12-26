@@ -14,13 +14,17 @@ body {
     align-items: center;
     flex-direction: column;
     position: relative; /* Necessário para posicionar a logo com position: absolute */
+    padding: 0 10px; /* Garante que o conteúdo não fique colado nas bordas em telas pequenas */
+    box-sizing: border-box; /* Para incluir o padding nas dimensões totais */
 }
 
 .logo {
     position: absolute;
-    top: 0px;
+    top: 20px;
     left: 20px;
-    max-width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+    max-width: 120px; /* Ajuste o tamanho da logo conforme necessário */
+    width: 100%; /* Faz com que a logo se ajuste ao tamanho máximo */
+    height: auto; /* Mantém a proporção da logo */
 }
 
 .date-time {
@@ -29,17 +33,19 @@ body {
     right: 20px;
     font-size: 16px;
     font-weight: bold;
+    color: white;
 }
 
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 20px; /* Espaço entre os botões */
     flex-wrap: wrap; /* Adiciona flex-wrap para melhorar a responsividade */
+    margin-top: 80px; /* Espaço superior para evitar sobreposição com a logo */
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 20px;
     font-size: 16px;
     background-color: #0DA9D5;
     color: white; /* Fonte branca nos botões */
@@ -48,6 +54,7 @@ button {
     cursor: pointer;
     width: 200px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px 0; /* Adiciona margem entre os botões */
 }
 
 button:hover {
@@ -56,7 +63,7 @@ button:hover {
 }
 
 .image-container {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 img {
@@ -71,7 +78,7 @@ p {
 
 .footer-text {
     position: absolute;
-    bottom: 70px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 24px;
@@ -90,13 +97,50 @@ p {
 
 /* Responsividade para telas pequenas */
 @media (max-width: 768px) {
+    body {
+        margin-top: 20px;
+    }
+
+    .logo {
+        max-width: 100px; /* Ajusta o tamanho da logo em telas menores */
+    }
+
+    .date-time {
+        font-size: 14px; /* Diminui o tamanho da data e hora */
+    }
+
     .container {
         flex-direction: column;
         align-items: center;
+        gap: 10px; /* Menos espaço entre os botões */
     }
 
     button {
         width: 100%;
         max-width: 300px; /* Limita o tamanho máximo do botão */
+    }
+
+    .footer-text {
+        font-size: 18px; /* Diminui o tamanho do texto no rodapé */
+    }
+
+    .contact-info {
+        font-size: 16px; /* Diminui o tamanho do texto de contato */
+        margin-top: 30px; /* Ajusta o espaço de contato em telas pequenas */
+    }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+    .container {
+        gap: 8px; /* Reduz o espaço entre os botões em telas menores */
+    }
+
+    button {
+        padding: 10px 15px; /* Ajusta o padding dos botões em telas pequenas */
+    }
+
+    .footer-text {
+        font-size: 16px; /* Ajusta o tamanho do texto no rodapé */
     }
 }
