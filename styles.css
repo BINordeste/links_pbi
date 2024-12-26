@@ -17,15 +17,14 @@ body {
     overflow-y: auto; /* Permite rolagem vertical */
 }
 
-.header {
+.header, .content, .footer {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px 0;
-    box-sizing: border-box;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    width: 100%;
     margin-bottom: 20px;
+    text-align: center;
+    flex-direction: column;
 }
 
 .logo {
@@ -101,6 +100,17 @@ p {
 
 .hidden { 
     display: none; /* Classe para esconder categorias de botões */
+}
+
+/* Centralização dos textos */
+.centered-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
 }
 
 /* Responsividade para telas pequenas */
